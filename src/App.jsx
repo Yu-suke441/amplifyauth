@@ -30,25 +30,24 @@ useEffect(() => {
   return (
     <div className="App">
       <header className="App-header">
-
         <h2>My App Content</h2>
         <AmplifySignOut/>
-        
       </header>
       <div className="userList">
         { users.map(user => {
           return (
             <table border="1">
               <tr>
+                <th>ID</th>
                 <th>名前</th>
                 <th>詳細</th>
               </tr>
               <tr>
+                <td>{user.id}</td>
                 <td>{user.name}</td>
                 <td>{user.description}</td>
               </tr>
             </table>
-            
           )
         })}
       </div>
